@@ -1,0 +1,24 @@
+.wordbuttons__buttons-pad {
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-content:center;
+}
+
+.wordbuttons__ok-button {
+  margin-top: 120px;
+  width: 200px;
+  height: 75px;
+  border:none;
+  border:solid 2.5px #FDA7AE;
+  border-radius: 5px;
+  background: rgba(255, 255, 255,0);
+  font-size: 30px;
+  color: #747374;
+}
+
+.wordbuttons__ok-button:hover {
+  background:#FDA7AE;
+  color:white; 
+}

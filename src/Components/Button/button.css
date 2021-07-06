@@ -1,0 +1,16 @@
+.button__word-button {
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  border:none;
+  border:solid 2.5px #FDA7AE;
+  border-radius: 5px;
+  background: rgba(255, 255, 255,0);
+  font-size: 16px;
+  color: #747374;
+}
+
+.button__word-button:hover {
+  background:#FDA7AE;
+  color:white; 
+}

@@ -1,0 +1,10 @@
+h1 {
+  padding: 20px;
+  color: #442B3A;
+  text-align: center;
+  font-family: "Russo One", sans-serif;
+}
+
+.logo {
+  display: flex;
+}
