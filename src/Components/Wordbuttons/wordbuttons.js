@@ -9,7 +9,9 @@ export default function Wordbuttons({ words40 }) {
 
     return (
       <>
-        <div className="wordbuttons__buttons-pad">{buttonsElements}</div>
+        <div className="wordbuttons__buttons-pad">
+          {buttonsElements}
+        </div>
         <div className='wordbuttons__ok-button-container'>
           <button className='wordbuttons__ok-button'>Ok</button>
         </div>
