@@ -5,7 +5,7 @@ let timeout;
 let interval;
 
 export default function GameNumberDisplay({words15Array, hideWordDisplayAndShowWordButtons}) {
-  console.log("wordsdisplayArray", words15Array)
+  //console.log("wordsdisplayArray", words15Array)
   const [n, setN] = useState(0);
   const [hidden, setHidden] = useState(false);
   
@@ -24,7 +24,7 @@ export default function GameNumberDisplay({words15Array, hideWordDisplayAndShowW
     });
     setTimeout(() => {
       setHidden(true);
-    }, 2000);
+    }, 20);
   }, []);
 
   useEffect(() => {
@@ -36,16 +36,16 @@ export default function GameNumberDisplay({words15Array, hideWordDisplayAndShowW
         clearInterval(interval);
         clearTimeout(timeout);
       };
-    }, 2500);
+    }, 25);
 
     setTimeout(() => {
       setHidden(true);
-    }, 2000);
+    }, 20);
   }, [rotateWords]);
 
   return (
     <>
-      <h1>Remember these words:</h1>
+      <h1>Remember these 15 words:</h1>
       <div className="worddisplay__random-word-display">{!hidden && words15Array[n]}</div>
     </>
   )
