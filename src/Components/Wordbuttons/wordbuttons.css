@@ -7,7 +7,7 @@
 }
 
 .wordbuttons__ok-button {
-  margin-top: 120px;
+  margin-top: 0px;
   width: 200px;
   height: 75px;
   border:none;
@@ -21,4 +21,8 @@
 .wordbuttons__ok-button:hover {
   background:#FDA7AE;
   color:white; 
+}
+
+.wordbuttons__selected-button-number-display{
+
 }

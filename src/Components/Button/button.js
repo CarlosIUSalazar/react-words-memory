@@ -2,19 +2,21 @@ import React, { useState, useContext } from 'react'
 import { WordContext } from '../Game/game'
 import './button.css'
 
-export default function Button({word}) {
+export default function Button({word, handleNumberWordsPressed}) {
   const {handleUserWordsInput} = useContext(WordContext)
+
   const [isPressed,setIsPressed] = useState(false)
 
-
-  const showWord = (word) => {
+  const handleWordClick = (word) => {
     handleUserWordsInput(word)
+    isPressed ? setIsPressed(false) : setIsPressed(true)
     console.log("the word is", word)
+    handleNumberWordsPressed()
   }
 
   return (
         
-    <button className='button__word-button' onClick={() => {showWord(word)}}>{word}</button>
+    <button style = { isPressed ? {background:'#FDA7AE', color:'white'} : {background:'rgba(255, 255, 255,0)', color:'#747374'}} className='button__word-button' onClick={() => {handleWordClick(word)}}>{word}</button>
         
   )
 }

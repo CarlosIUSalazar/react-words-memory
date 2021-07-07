@@ -25,8 +25,15 @@ export default function Game() {
 
   
   const handleUserWordsInput = (word) => {
-    userAnswerArray.push(word)
-    //console.log("userAnswerArray",userAnswerArray)
+    if (userAnswerArray.includes(word)) {
+      const index = userAnswerArray.indexOf(word);
+      if (index > -1) {
+        userAnswerArray.splice(index, 1);
+      }
+    } else {
+      userAnswerArray.push(word)
+    }
+    console.log("userAnswerArray",userAnswerArray)
   }
 
   
