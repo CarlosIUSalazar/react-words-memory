@@ -42,7 +42,7 @@ export default function Game() {
     const correctAnswers = words15Array.current.filter(e => userAnswerArray.indexOf(e) !== -1);
     console.log("correctAnswers",correctAnswers)
     //Update score
-    setScore(correctAnswers.length)
+    setScore(score = score + correctAnswers.length)
     setTotalPossibleScore(totalPossibleScore = totalPossibleScore + 15)
     //Empezar de nuevo.  Desaparecer WordPad, Ok Button, Recalculate Arrays
     setShowWordDisplay(false)
@@ -110,7 +110,7 @@ export default function Game() {
   
   
   const shuffleArray = (array) => {
-    //Durstenfeld shuffle to randomize order of 40 word array
+    //Durstenfeld shuffle technique to randomize the order of 40 word array
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
@@ -143,7 +143,7 @@ export default function Game() {
           {startButtonShow && <button className="show-words-btn" onClick={()=> handleStartButton()}>Show Words</button>}
         </div>
         {showWordDisplay && <WordDisplay words15Array={words15Array.current} hideWordDisplayAndShowWordButtons={hideWordDisplayAndShowWordButtons}/>}
-        {wordPadShow && <Wordbuttons words40={words40Array.current} handleOkButton={handleOkButton}/>}
+        {wordPadShow && <Wordbuttons words40={words40Array.current} handleOkButton={handleOkButton} userAnswerArray={userAnswerArray}/>}
       </WordContext.Provider>
     </>
   )

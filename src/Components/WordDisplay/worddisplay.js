@@ -24,7 +24,7 @@ export default function GameNumberDisplay({words15Array, hideWordDisplayAndShowW
     });
     setTimeout(() => {
       setHidden(true);
-    }, 2000);
+    }, 15);
   }, []);
 
   useEffect(() => {
@@ -36,11 +36,11 @@ export default function GameNumberDisplay({words15Array, hideWordDisplayAndShowW
         clearInterval(interval);
         clearTimeout(timeout);
       };
-    }, 2500);
+    }, 20);
 
     setTimeout(() => {
       setHidden(true);
-    }, 2000);
+    }, 15);
   }, [rotateWords]);
 
   return (
